@@ -7,10 +7,10 @@ function ListItem(props){
 	const [tempTask, setTempTask] = useState(children);
 	return isEditMode ? (
 		<li>
-			<textarea value={tempTask} onChange = {function(event){
+			<textarea className="editTask" value={tempTask} onChange = {function(event){
 				setTempTask(event.target.value);
 			}}></textarea>
-			<button
+			<button className="saveTask"
 			onClick={function(){
 				if(tempTask !== ''){
 					onModify(tempTask);
